@@ -11,7 +11,8 @@
     "lint": "eslint --ext .jsx --ext .jsx ./src",
     "lint:fix": "eslint --fix --ext .jsx --ext .jsx ./src",
     "format": "prettier --check ./src",
-    "write": "prettier --write ./src"
+    "write": "prettier --write ./src",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
@@ -40,6 +41,8 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.5.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^12.4.1",
     "prettier": "^2.6.2"
   },
   "private": true
