@@ -38,10 +38,10 @@
   4.7 [Optional] For TypeScript, run `npm i -D eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react-hooks`
   4.8 Add Script to package.json `"lint": "eslint ."`
   4.9 `npm i -D prettier eslint-plugin-prettier`
-  5.10 [Guide](https://dev-yakuza.posstree.com/en/react-native/eslint-prettier-husky-lint-staged/)
+  4.10 [Guide](https://dev-yakuza.posstree.com/en/react-native/eslint-prettier-husky-lint-staged/)
 
 ### Prettier and ESLint
-1. `npm i -D eslint-config-prettier eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks`
+1. `npm i -D eslint-config-prettier eslint-plugin-react-hooks`
 2. Create a `.prettierignore` following:
   ```
   # Ignore artifacts:
@@ -56,12 +56,27 @@
   };
   ```
 4. Follow this [gist](https://gist.github.com/MarcusTw/97a14cba79a604b2b18e58b474d31350), copy your `.eslintrc.js`.
-5. In your `package.json`, add the following scripts
-  5.1 `"lint": "eslint --ext .jsx --ext .jsx ./src"`
-  5.2 `"lint:fix": "eslint --fix --ext .jsx --ext .jsx ./src"`
-  5.3 `"format": "prettier --check ./src"`
-  5.4 `"write": "prettier --write ./src"`
-6. You can run `npm run <SCRIPT_NAME>` or `npm <SCRIPT_NAME>` eg. `npm run lint:fix`.
+5. Create a folder called `src` and this is where you will write all your code.
+  5.1 In `src` folder, create an `index.jsx` and move the code from `App.js` here
+  5.2 In `App.js` change it to
+  ```
+  export { default as Main } from './src';
+  ```
+  or 
+  ```
+  import Main from './src`;
+  export default Main;
+  ```
+6. In your `package.json`, add the following scripts
+  ```
+  "lint": "eslint --ext .jsx --ext .jsx ./src",
+  "lint:fix": "eslint --fix --ext .jsx --ext .jsx ./src",
+  "format": "prettier --check ./src",
+  "write": "prettier --write ./src"
+  ```
+7. You can run `npm run <SCRIPT_NAME>` or `npm <SCRIPT_NAME>` eg. `npm run lint:fix`.
+8. Now, check that if you do not follow the styling in `.eslintrc.js`, you have red squiggly ("error"). You can always change to "warn" in `.eslintrc.js`.
+8. At this juncture, do a simple check `npm run web` to see if there is any errors.
 
 ### Husky Integration with Prettier and ESLint
 1. `npm i -D husky lint-staged`
@@ -106,3 +121,11 @@
 3. In `package.json`, change `"name"` to your `<APP_NAME>`
 4. `pnpm i --shamefully-hoist`
 5. Delete this `README.md` and replace with your own...
+
+
+### Specifications
+| Package Manager | Version |
+|-----------------|---------|
+| npm             | 8.3.1   |
+| yarn            | 1.22.18 |
+| pnpm            | 6.32.11 |
