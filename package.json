@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"No test specified\"",
     "prepare": "husky install",
-    "lint:fix": "cd packages/expo-app && pnpm run lint:fix"
+    "lint:fix": "cd packages/expo-app && pnpm run lint:fix",
+    "start": "cd packages/expo-app && pnpm run start"
   },
   "devDependencies": {
     "husky": "^8.0.0",
