@@ -127,7 +127,8 @@
   ```sh
   npm i
   ```
-5. Delete this `README.md` and replace with your own...
+5. Add your own unit tests and change the test script in `package.json`.
+6. Delete this `README.md` and replace with your own...
 
 ### Specifications
 | Package Manager | Version |
