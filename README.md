@@ -21,6 +21,7 @@
 - To install pnpm, go to [pnpm installation documentation](https://pnpm.io/installation)
 - For npm/yarn users, run `expo init`
 - For pnpm users, run `expo init --no-install`, then cd to workspace and run `pnpm i --shamefully-hoist` HAHAHA because there's some problem with React and pnpm, so to install required dependencies we need to add shamefully-hoist, but it gets better after that :). Subsequent dependencies you can just do `pnpm add <package_name>`.
+- Why you should use [pnpm](https://pnpm.io/) explained [here](https://www.youtube.com/watch?v=d1E31WPR70g&feature=emb_title&ab_channel=CoderOne)
 
 ## React Native Application
 
@@ -114,12 +115,19 @@
 
 ## Usage
 1. `git clone https://github.com/MarcusTw/rn-workshop-2.git <APP_NAME>`
-2. In `package.json`, change `name` to your `<APP_NAME>`
-3. Install dependencies
+2. Branches:
+  2.1 For npm users, use [main branch](https://github.com/MarcusTw/rn-workshop-2/tree/main)
+  2.2 For yarn users, use [main branch](https://github.com/MarcusTw/rn-workshop-2/tree/main) and delete `package-lock.json` and run `yarn install`
+  2.3 For pnpm users, use [initialisation branch](https://github.com/MarcusTw/rn-workshop-2/tree/initialisation)
+  ```sh
+  git checkout initialisation
+  ```
+3. In `package.json`, change `name` to your `<APP_NAME>`
+4. Install dependencies
   ```sh
   npm i
   ```
-4. Delete this `README.md` and replace with your own...
+5. Delete this `README.md` and replace with your own...
 
 
 ### Specifications
