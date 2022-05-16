@@ -1,6 +1,32 @@
-# React Native Application
+# rn-workshop-2
 
-## Instructions
+## VSCode Extensions
+
+1. ES7+ React/Redux/React-Native snippets [dsznajder.es7-react-js-snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
+   1.1 Snippets for boilerplate code (rnfes - React Native Functional component Export with Stylesheet)
+   1.2 [Documentation](https://github.com/dsznajder/vscode-react-javascript-snippets/blob/HEAD/docs/Snippets.md) for shortcuts
+2. VSCode React Refactor [planbcoding.vscode-react-refactor](https://marketplace.visualstudio.com/items?itemName=planbcoding.vscode-react-refactor)
+   2.1 Abstract Component into a file on its own
+3. ESLint [dbaeumer.vscode-eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+   3.1 Write cleaner code to prevent bugs in future
+   3.2 Linters - Define style for codebase (eg. space vs tab, ' vs ", semicolon or anti-semicolon)
+4. Prettier [esbenp.prettier-vscode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+   4.1 Help you style your code (formatter)
+   4.2 Integrate with ESLint
+5. Highlight Matching Tag [vincaslt.highlight-matching-tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag)
+   5.1 Easier to see which is the enclosing tag
+6. Auto Rename Tag [formulahendry.auto-rename-tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
+
+## npm, yarn, pnpm
+
+- Follow Workshop Preparations to install node.js, npm/yarn
+- To install pnpm, go to [pnpm installation documentation](https://pnpm.io/installation)
+- For npm/yarn users, run `expo init`
+- For pnpm users, run `expo init --no-install`, then cd to workspace and run `pnpm i --shamefully-hoist` HAHAHA because there's some problem with React and pnpm, so to install required dependencies we need to add shamefully-hoist, but it gets better after that :). Subsequent dependencies you can just do `pnpm add <package_name>`.
+
+## React Native Application
+
+### Instructions
 
 1. `expo init <APP_NAME> --no-install` -> `cd <APP_NAME>`
 2. `pnpm i --shamefully-hoist` or `npm i` or `yarn` //i is short for install
@@ -16,3 +42,43 @@
    4.8 Add Script to package.json `"lint": "eslint ."`
    4.9 `pnpm i -D prettier eslint-plugin-prettier`
    5.10 [Guide](https://dev-yakuza.posstree.com/en/react-native/eslint-prettier-husky-lint-staged/)
+
+### Prettier, ESLint and Husky integration
+
+1. `pnpm i -D eslint-config-prettier eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks husky lint-staged`
+2. Create a `.prettierignore` following:
+   ```
+   # Ignore artifacts:
+   build
+   coverage
+   ```
+3. Create a `.prettierrc.js` following:
+   ```
+   module.exports = {
+     singleQuote: true,
+     trailingComma: 'all',
+   };
+   ```
+4. Follow this [gist](https://gist.github.com/MarcusTw/97a14cba79a604b2b18e58b474d31350), copy your `.eslintrc.js`.
+5. In your `package.json`, add the following scripts
+   5.1 `"lint": "eslint --ext .jsx --ext .jsx ./src"`
+   5.2 `"lint:fix": "eslint --fix --ext .jsx --ext .jsx ./src"`
+   5.3 `"format": "prettier --check ./src"`
+   5.4 `"write": "prettier --write ./src"`
+6. In your `package.json`, add the following configurations
+   ```
+   "lint-staged": {
+      "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+         "prettier --config .prettierrc --write",
+         "git add"
+      ]
+   },
+   "husky": {
+      "hooks": {
+         "pre-commit": "lint-staged"
+      }
+   },
+   ```
+7. `pnpm dlx husky-init && pnpm install # pnpm`
+8. `pnpx husky install`
+9. `pnpx husky add .husky/pre-commit "pnpx run lint:fix"`
