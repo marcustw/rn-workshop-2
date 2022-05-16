@@ -22,7 +22,7 @@
 - For npm/yarn users, run `expo init`
 - For pnpm users, you may run into some issues running expo. If you wish to use pnpm, you can try using `react-native-cli` instead of `expo`.
   - (Not recommended) Or else you can use the old version [here](https://github.com/vjpr/pnpm-expo-example)
-  - Why you should use [pnpm](https://pnpm.io/) explained [here](https://www.youtube.com/watch?v=d1E31WPR70g&feature=emb_title&ab_channel=CoderOne)
+  - Benefits of [pnpm](https://pnpm.io/) explained [here](https://www.youtube.com/watch?v=d1E31WPR70g&feature=emb_title&ab_channel=CoderOne)
 
 ## React Native Application
 
