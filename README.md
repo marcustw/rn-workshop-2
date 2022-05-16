@@ -81,4 +81,4 @@
    ```
 7. `pnpm dlx husky-init && pnpm install # pnpm`
 8. `pnpx husky install`
-9. `pnpx husky add .husky/pre-commit "pnpx run lint:fix"`
+9. `pnpx husky add .husky/pre-commit "pnpx lint:fix"`

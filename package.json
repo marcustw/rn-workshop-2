@@ -8,6 +8,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
+    "test": "echo hello world",
     "lint": "eslint --ext .jsx --ext .jsx ./src",
     "lint:fix": "eslint --fix --ext .jsx --ext .jsx ./src",
     "format": "prettier --check ./src",
