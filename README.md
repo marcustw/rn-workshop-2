@@ -7,7 +7,7 @@
 2. VSCode React Refactor [planbcoding.vscode-react-refactor](https://marketplace.visualstudio.com/items?itemName=planbcoding.vscode-react-refactor)
   2.1 Abstract Component into a file on its own
 3. ESLint [dbaeumer.vscode-eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-  3.1 Write cleaner code to prevent bugs in future
+  3.1 Write cleaner code to prevent bugs in future, check for possible errors
   3.2 Linters - Define style for codebase (eg. space vs tab, ' vs ", semicolon or anti-semicolon)
 4. Prettier [esbenp.prettier-vscode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
   4.1 Help you style your code (formatter)
@@ -15,6 +15,8 @@
 5. Highlight Matching Tag [vincaslt.highlight-matching-tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag)
   5.1 Easier to see which is the enclosing tag
 6. Auto Rename Tag [formulahendry.auto-rename-tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
+
+Reference: [TOP 10 VSCode Extensions for React/React Native Developers](https://www.youtube.com/watch?v=jCzJYyknKGg&ab_channel=notJust%E2%80%A4dev)
 
 ## npm, yarn, pnpm
 - Follow Workshop Preparations to install node.js, npm/yarn
