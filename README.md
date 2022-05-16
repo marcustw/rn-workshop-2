@@ -83,3 +83,11 @@
 8. `pnpx husky install`
 9. `pnpx husky add .husky/pre-commit "pnpm lint:fix"`
 10. `pnpx husky add .husky/pre-commit "pnpm test"` //run tests before commit
+11. Add test script in `package.json`
+
+```
+"scripts": {
+  ...
+  "test": "echo hello_world",
+}
+```
