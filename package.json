@@ -1,22 +1,19 @@
 {
-  "name": "workshop",
+  "name": "pnpm-expo",
   "version": "1.0.0",
-  "main": "node_modules/expo/AppEntry.js",
+  "description": "1. ES7+ React/Redux/React-Native snippets [dsznajder.es7-react-js-snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)\r   1.1 Snippets for boilerplate code (rnfes - React Native Functional component Export with Stylesheet)\r   1.2 [Documentation](https://github.com/dsznajder/vscode-react-javascript-snippets/blob/HEAD/docs/Snippets.md) for shortcuts\r 2. VSCode React Refactor [planbcoding.vscode-react-refactor](https://marketplace.visualstudio.com/items?itemName=planbcoding.vscode-react-refactor)\r   2.1 Abstract Component into a file on its own\r 3. ESLint [dbaeumer.vscode-eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)\r   3.1 Write cleaner code to prevent bugs in future\r   3.2 Linters - Define style for codebase (eg. space vs tab, ' vs \", semicolon or anti-semicolon)\r 4. Prettier [esbenp.prettier-vscode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)\r   4.1 Help you style your code (formatter)\r   4.2 Integrate with ESLint\r 5. Highlight Matching Tag [vincaslt.highlight-matching-tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag)\r   5.1 Easier to see which is the enclosing tag\r 6. Auto Rename Tag [formulahendry.auto-rename-tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)",
+  "main": "index.js",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "eject": "expo eject",
-    "test": "echo hello world",
-    "lint": "eslint --ext .jsx --ext .jsx ./src",
-    "lint:fix": "eslint --fix --ext .jsx --ext .jsx ./src",
-    "format": "prettier --check ./src",
-    "write": "prettier --write ./src",
-    "prepare": "husky install"
+    "test": "echo \"No test specified\"",
+    "prepare": "husky install",
+    "lint:fix": "cd packages/expo-app && pnpm run lint:fix"
+  },
+  "devDependencies": {
+    "husky": "^8.0.0",
+    "lint-staged": "^12.4.1"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+    "packages/expo-app/src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "prettier --config .prettierrc --write",
       "git add"
     ]
@@ -26,25 +23,14 @@
       "pre-commit": "lint-staged"
     }
   },
-  "dependencies": {
-    "expo": "~45.0.0",
-    "expo-status-bar": "~1.3.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-native": "0.68.2",
-    "react-native-web": "0.17.7"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcusTw/rn-workshop-2.git"
   },
-  "devDependencies": {
-    "@babel/core": "^7.12.9",
-    "@babel/preset-env": "^7.1.6",
-    "eslint": "^8.15.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.29.4",
-    "eslint-plugin-react-hooks": "^4.5.0",
-    "husky": "^7.0.0",
-    "lint-staged": "^12.4.1",
-    "prettier": "^2.6.2"
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarcusTw/rn-workshop-2/issues"
   },
-  "private": true
+  "homepage": "https://github.com/MarcusTw/rn-workshop-2#readme"
 }
