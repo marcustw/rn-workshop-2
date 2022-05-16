@@ -118,7 +118,7 @@
 2. Branches:
   2.1 For npm users, use [main branch](https://github.com/MarcusTw/rn-workshop-2/tree/main)
   2.2 For yarn users, use [main branch](https://github.com/MarcusTw/rn-workshop-2/tree/main) and delete `package-lock.json` and run `yarn install`. Basically replace `npm i` -> `yarn add`.
-  2.3 For pnpm users, use [initialisation branch](https://github.com/MarcusTw/rn-workshop-2/tree/initialisation). Basically replacing `npm` -> `pnpm` and `npx` -> `pnpx`.
+  2.3 For pnpm users, use [initialisation branch](https://github.com/MarcusTw/rn-workshop-2/tree/pnpm-initialisation). Basically replacing `npm` -> `pnpm` and `npx` -> `pnpx`.
   ```sh
   git checkout initialisation
   ```
