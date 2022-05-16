@@ -15,3 +15,10 @@
 5. Highlight Matching Tag [vincaslt.highlight-matching-tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag)
   5.1 Easier to see which is the enclosing tag
 6. Auto Rename Tag [formulahendry.auto-rename-tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
+
+
+## npm, yarn, pnpm
+- Follow Workshop Preparations to install node.js, npm/yarn
+- To install pnpm, go to [pnpm installation documentation](https://pnpm.io/installation)
+- For npm/yarn users, run `expo init`
+- For pnpm users, run `expo init --no-install`, then cd to workspace and run `pnpm i --shamefully-hoist` HAHAHA because there's some problem with React and pnpm, so to install required dependencies we need to add shamefully-hoist, but it gets better after that :). Subsequent dependencies you can just do `pnpm add <package_name>`.
