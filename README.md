@@ -3,18 +3,18 @@
 ## VSCode Extensions
 
 1. ES7+ React/Redux/React-Native snippets [dsznajder.es7-react-js-snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
-   1.1 Snippets for boilerplate code (rnfes - React Native Functional component Export with Stylesheet)
-   1.2 [Documentation](https://github.com/dsznajder/vscode-react-javascript-snippets/blob/HEAD/docs/Snippets.md) for shortcuts
+  1.1 Snippets for boilerplate code (rnfes - React Native Functional component Export with Stylesheet)
+  1.2 [Documentation](https://github.com/dsznajder/vscode-react-javascript-snippets/blob/HEAD/docs/Snippets.md) for shortcuts
 2. VSCode React Refactor [planbcoding.vscode-react-refactor](https://marketplace.visualstudio.com/items?itemName=planbcoding.vscode-react-refactor)
-   2.1 Abstract Component into a file on its own
+  2.1 Abstract Component into a file on its own
 3. ESLint [dbaeumer.vscode-eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-   3.1 Write cleaner code to prevent bugs in future
-   3.2 Linters - Define style for codebase (eg. space vs tab, ' vs ", semicolon or anti-semicolon)
+  3.1 Write cleaner code to prevent bugs in future
+  3.2 Linters - Define style for codebase (eg. space vs tab, ' vs ", semicolon or anti-semicolon)
 4. Prettier [esbenp.prettier-vscode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-   4.1 Help you style your code (formatter)
-   4.2 Integrate with ESLint
+  4.1 Help you style your code (formatter)
+  4.2 Integrate with ESLint
 5. Highlight Matching Tag [vincaslt.highlight-matching-tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag)
-   5.1 Easier to see which is the enclosing tag
+  5.1 Easier to see which is the enclosing tag
 6. Auto Rename Tag [formulahendry.auto-rename-tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
 
 ## npm, yarn, pnpm
@@ -32,62 +32,61 @@
 2. `pnpm i --shamefully-hoist` or `npm i` or `yarn` //i is short for install
 3. `pnpm i -D eslint` //-D is short for --save-dev
 4. `pnpm init @eslint/config` //hit space to select, hit enter to finalise selection
-   4.1 Check syntax, find problems and enforce code style
-   4.2 JavaScript modules (import/export) //even if you are using typescript
-   4.3 React //even if you are using react native
-   4.4 No (unless you are using TypeScript, legend)
-   4.5 Node + Browser
-   4.6 Answer questions about your style (config=js;indentation=spaces;quotes=single;line_endings=windows/unix(or Mac);require_semicolons=Yes;)
-   4.7 [Optional] For TypeScript, run `pnpm i -D eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react-hooks`
-   4.8 Add Script to package.json `"lint": "eslint ."`
-   4.9 `pnpm i -D prettier eslint-plugin-prettier`
-   5.10 [Guide](https://dev-yakuza.posstree.com/en/react-native/eslint-prettier-husky-lint-staged/)
+  4.1 Check syntax, find problems and enforce code style
+  4.2 JavaScript modules (import/export) //even if you are using typescript
+  4.3 React //even if you are using react native
+  4.4 No (unless you are using TypeScript, legend)
+  4.5 Node + Browser
+  4.6 Answer questions about your style (config=js;indentation=spaces;quotes=single;line_endings=windows/unix(or Mac);require_semicolons=Yes;)
+  4.7 [Optional] For TypeScript, run `pnpm i -D eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react-hooks`
+  4.8 Add Script to package.json `"lint": "eslint ."`
+  4.9 `pnpm i -D prettier eslint-plugin-prettier`
+  5.10 [Guide](https://dev-yakuza.posstree.com/en/react-native/eslint-prettier-husky-lint-staged/)
 
 ### Prettier, ESLint and Husky integration
 
 1. `pnpm i -D eslint-config-prettier eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks husky lint-staged`
 2. Create a `.prettierignore` following:
-   ```
-   # Ignore artifacts:
-   build
-   coverage
-   ```
+  ```
+  # Ignore artifacts:
+  build
+  coverage
+  ```
 3. Create a `.prettierrc.js` following:
-   ```
-   module.exports = {
-     singleQuote: true,
-     trailingComma: 'all',
-   };
-   ```
+  ```
+  module.exports = {
+    singleQuote: true,
+    trailingComma: 'all',
+  };
+  ```
 4. Follow this [gist](https://gist.github.com/MarcusTw/97a14cba79a604b2b18e58b474d31350), copy your `.eslintrc.js`.
 5. In your `package.json`, add the following scripts
-   5.1 `"lint": "eslint --ext .jsx --ext .jsx ./src"`
-   5.2 `"lint:fix": "eslint --fix --ext .jsx --ext .jsx ./src"`
-   5.3 `"format": "prettier --check ./src"`
-   5.4 `"write": "prettier --write ./src"`
+  5.1 `"lint": "eslint --ext .jsx --ext .jsx ./src"`
+  5.2 `"lint:fix": "eslint --fix --ext .jsx --ext .jsx ./src"`
+  5.3 `"format": "prettier --check ./src"`
+  5.4 `"write": "prettier --write ./src"`
 6. In your `package.json`, add the following configurations
-   ```
-   "lint-staged": {
-      "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-         "prettier --config .prettierrc --write",
-         "git add"
-      ]
-   },
-   "husky": {
-      "hooks": {
-         "pre-commit": "lint-staged"
-      }
-   },
-   ```
+  ```
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+        "prettier --config .prettierrc --write",
+        "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+        "pre-commit": "lint-staged"
+    }
+  },
+  ```
 7. `pnpm dlx husky-init && pnpm install # pnpm`
 8. `pnpx husky install`
 9. `pnpx husky add .husky/pre-commit "pnpm lint:fix"`
 10. `pnpx husky add .husky/pre-commit "pnpm test"` //run tests before commit
 11. Add test script in `package.json`
-
-```
-"scripts": {
-  ...
-  "test": "echo hello_world",
-}
-```
+  ```
+  "scripts": {
+    ...
+    "test": "echo hello_world",
+  }
+  ```
