@@ -101,7 +101,6 @@
   npx husky-init && npm install       # npm
   npx husky-init && yarn              # Yarn 1
   yarn dlx husky-init --yarn2 && yarn # Yarn 2+
-  pnpm dlx husky-init && pnpm install # pnpm
   ```
 4. `npx husky install`
 5. `npx husky add .husky/pre-commit "npm lint:fix"`
@@ -119,10 +118,6 @@
 2. Branches:
   2.1 For npm users, use [main branch](https://github.com/MarcusTw/rn-workshop-2/tree/main)
   2.2 For yarn users, use [main branch](https://github.com/MarcusTw/rn-workshop-2/tree/main) and delete `package-lock.json` and run `yarn install`. Basically replace `npm i` -> `yarn add`.
-  2.3 For pnpm users, use [initialisation branch](https://github.com/MarcusTw/rn-workshop-2/tree/pnpm-initialisation). Basically replacing `npm` -> `pnpm` and `npx` -> `pnpx`.
-  ```sh
-  git checkout initialisation
-  ```
 3. In `package.json`, change `name` to your `<APP_NAME>`
 4. Install dependencies
   ```sh
@@ -136,4 +131,3 @@
 |-----------------|---------|
 | npm             | 8.3.1   |
 | yarn            | 1.22.18 |
-| pnpm            | 6.32.11 |
