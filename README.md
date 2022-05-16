@@ -1,7 +1,6 @@
 # rn-workshop-2
 
 ## VSCode Extensions
-
 1. ES7+ React/Redux/React-Native snippets [dsznajder.es7-react-js-snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
   1.1 Snippets for boilerplate code (rnfes - React Native Functional component Export with Stylesheet)
   1.2 [Documentation](https://github.com/dsznajder/vscode-react-javascript-snippets/blob/HEAD/docs/Snippets.md) for shortcuts
@@ -18,7 +17,6 @@
 6. Auto Rename Tag [formulahendry.auto-rename-tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
 
 ## npm, yarn, pnpm
-
 - Follow Workshop Preparations to install node.js, npm/yarn
 - To install pnpm, go to [pnpm installation documentation](https://pnpm.io/installation)
 - For npm/yarn users, run `expo init`
@@ -27,25 +25,23 @@
 ## React Native Application
 
 ### Instructions
-
 1. `expo init <APP_NAME> --no-install` -> `cd <APP_NAME>`
-2. `pnpm i --shamefully-hoist` or `npm i` or `yarn` //i is short for install
-3. `pnpm i -D eslint` //-D is short for --save-dev
-4. `pnpm init @eslint/config` //hit space to select, hit enter to finalise selection
+2. `npm i` or `yarn` or `pnpm i --shamefully-hoist` //i is short for install, some problem with React and pnpm so on installing react/react-native packages, need to use --shamefully-hoist, not needed for other packages
+3. `npm i -D eslint` //-D is short for --save-dev
+4. `npm init @eslint/config` //hit space to select, hit enter to finalise selection
   4.1 Check syntax, find problems and enforce code style
   4.2 JavaScript modules (import/export) //even if you are using typescript
   4.3 React //even if you are using react native
   4.4 No (unless you are using TypeScript, legend)
   4.5 Node + Browser
   4.6 Answer questions about your style (config=js;indentation=spaces;quotes=single;line_endings=windows/unix(or Mac);require_semicolons=Yes;)
-  4.7 [Optional] For TypeScript, run `pnpm i -D eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react-hooks`
+  4.7 [Optional] For TypeScript, run `npm i -D eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react-hooks`
   4.8 Add Script to package.json `"lint": "eslint ."`
-  4.9 `pnpm i -D prettier eslint-plugin-prettier`
+  4.9 `npm i -D prettier eslint-plugin-prettier`
   5.10 [Guide](https://dev-yakuza.posstree.com/en/react-native/eslint-prettier-husky-lint-staged/)
 
 ### Prettier, ESLint and Husky integration
-
-1. `pnpm i -D eslint-config-prettier eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks husky lint-staged`
+1. `npm i -D eslint-config-prettier eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks husky lint-staged`
 2. Create a `.prettierignore` following:
   ```
   # Ignore artifacts:
@@ -79,10 +75,16 @@
     }
   },
   ```
-7. `pnpm dlx husky-init && pnpm install # pnpm`
-8. `pnpx husky install`
-9. `pnpx husky add .husky/pre-commit "pnpm lint:fix"`
-10. `pnpx husky add .husky/pre-commit "pnpm test"` //run tests before commit
+7. Init husky
+  ```
+  npx husky-init && npm install       # npm
+  npx husky-init && yarn              # Yarn 1
+  yarn dlx husky-init --yarn2 && yarn # Yarn 2+
+  pnpm dlx husky-init && pnpm install # pnpm
+  ```
+8. `npx husky install`
+9. `npx husky add .husky/pre-commit "npm lint:fix"`
+10. `npx husky add .husky/pre-commit "npm test"` //run tests before commit
 11. Add test script in `package.json`
   ```
   "scripts": {
