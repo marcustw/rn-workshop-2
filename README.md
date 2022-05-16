@@ -40,8 +40,8 @@
   4.9 `npm i -D prettier eslint-plugin-prettier`
   5.10 [Guide](https://dev-yakuza.posstree.com/en/react-native/eslint-prettier-husky-lint-staged/)
 
-### Prettier, ESLint and Husky integration
-1. `npm i -D eslint-config-prettier eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks husky lint-staged`
+### Prettier and ESLint
+1. `npm i -D eslint-config-prettier eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks`
 2. Create a `.prettierignore` following:
   ```
   # Ignore artifacts:
@@ -61,7 +61,11 @@
   5.2 `"lint:fix": "eslint --fix --ext .jsx --ext .jsx ./src"`
   5.3 `"format": "prettier --check ./src"`
   5.4 `"write": "prettier --write ./src"`
-6. In your `package.json`, add the following configurations
+6. You can run `npm run <SCRIPT_NAME>` or `npm <SCRIPT_NAME>` eg. `npm run lint:fix`.
+
+### Husky Integration with Prettier and ESLint
+1. `npm i -D husky lint-staged`
+2. In your `package.json`, add the following configurations
   ```
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
@@ -75,17 +79,17 @@
     }
   },
   ```
-7. Init husky
+3. Init husky
   ```
   npx husky-init && npm install       # npm
   npx husky-init && yarn              # Yarn 1
   yarn dlx husky-init --yarn2 && yarn # Yarn 2+
   pnpm dlx husky-init && pnpm install # pnpm
   ```
-8. `npx husky install`
-9. `npx husky add .husky/pre-commit "npm lint:fix"`
-10. `npx husky add .husky/pre-commit "npm test"` //run tests before commit
-11. Add test script in `package.json`
+4. `npx husky install`
+5. `npx husky add .husky/pre-commit "npm lint:fix"`
+6. `npx husky add .husky/pre-commit "npm test"` //run tests before commit
+7. Add test script in `package.json`
   ```
   "scripts": {
     ...
@@ -93,8 +97,12 @@
   }
   ```
 
-### Usage
+## Usage
 1. `git clone https://github.com/MarcusTw/rn-workshop-2.git <APP_NAME>`
-2. [Optional] If you are using `npm` or `yarn`, please delete `pnpm-lock.yaml`
+2. [Optional] If you are using `npm` or `yarn`, additional steps are required:
+  2.1 delete `pnpm-lock.yaml`
+  2.2 run `npx husky set .husky/pre-commit "npm lint:fix"` //please do not use "npm run lint:fix" in husky
+  2.3 run `npx husky add .husky/pre-commit "npm test"`
 3. In `package.json`, change `"name"` to your `<APP_NAME>`
-4. Delete this `README.md` and replace with your own...
+4. `pnpm i --shamefully-hoist`
+5. Delete this `README.md` and replace with your own...
