@@ -92,3 +92,9 @@
     "test": "echo hello_world",
   }
   ```
+
+### Usage
+1. `git clone https://github.com/MarcusTw/rn-workshop-2.git <APP_NAME>`
+2. [Optional] If you are using `npm` or `yarn`, please delete `pnpm-lock.yaml`
+3. In `package.json`, change `"name"` to your `<APP_NAME>`
+4. Delete this `README.md` and replace with your own...
