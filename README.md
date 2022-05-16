@@ -20,14 +20,15 @@
 - Follow Workshop Preparations to install node.js, npm/yarn
 - To install pnpm, go to [pnpm installation documentation](https://pnpm.io/installation)
 - For npm/yarn users, run `expo init`
-- For pnpm users, run `expo init --no-install`, then cd to workspace and run `pnpm i --shamefully-hoist` HAHAHA because there's some problem with React and pnpm, so to install required dependencies we need to add shamefully-hoist, but it gets better after that :). Subsequent dependencies you can just do `pnpm add <package_name>`.
-- Why you should use [pnpm](https://pnpm.io/) explained [here](https://www.youtube.com/watch?v=d1E31WPR70g&feature=emb_title&ab_channel=CoderOne)
+- For pnpm users, you may run into some issues running expo. If you wish to use pnpm, you can try using `react-native-cli` instead of `expo`.
+  - (Not recommended) Or else you can use the old version [here](https://github.com/vjpr/pnpm-expo-example)
+  - Why you should use [pnpm](https://pnpm.io/) explained [here](https://www.youtube.com/watch?v=d1E31WPR70g&feature=emb_title&ab_channel=CoderOne)
 
 ## React Native Application
 
 ### Instructions
 1. `expo init <APP_NAME> --no-install` -> `cd <APP_NAME>`
-2. `npm i` or `yarn` or `pnpm i --shamefully-hoist` //i is short for install, some problem with React and pnpm so on installing react/react-native packages, need to use --shamefully-hoist, not needed for other packages
+2. `npm i` or `yarn`
 3. `npm i -D eslint` //-D is short for --save-dev
 4. `npm init @eslint/config` //hit space to select, hit enter to finalise selection
   4.1 Check syntax, find problems and enforce code style
