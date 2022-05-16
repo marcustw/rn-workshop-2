@@ -1,5 +1,1 @@
-import Main from './src';
-
-export default function App() {
-  return Main();
-}
+export { default as App } from './src';
