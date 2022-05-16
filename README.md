@@ -116,7 +116,7 @@
 1. `git clone https://github.com/MarcusTw/rn-workshop-2.git <APP_NAME>`
 2. [Optional] If you are using `npm` or `yarn`, additional steps are required:
   2.1 delete `pnpm-lock.yaml`
-  2.2 run `npx husky set .husky/pre-commit "npm lint:fix"` //please do not use "npm run lint:fix" in husky
+  2.2 run `npx husky set .husky/pre-commit "npm run lint:fix"`
   2.3 run `npx husky add .husky/pre-commit "npm test"`
 3. In `package.json`, change `"name"` to your `<APP_NAME>`
 4. `pnpm i --shamefully-hoist`
