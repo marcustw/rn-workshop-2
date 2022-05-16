@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Text, View } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
-import { decrement, increment } from '../redux/counter';
+import { decrement, increment } from '../../redux/counter';
 
 /**
  * Reference: https://react-redux.js.org/tutorials/quick-start

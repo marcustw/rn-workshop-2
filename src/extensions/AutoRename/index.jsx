@@ -46,7 +46,7 @@ export default AutoRename;
 
 const styles = StyleSheet.create({
   container: {
-    height: 100,
+    marginBottom: 20,
     width: 100,
     flexDirection: 'row',
     justifyContent: 'space-between',
