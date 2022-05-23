@@ -103,7 +103,7 @@
   yarn dlx husky-init --yarn2 && yarn # Yarn 2+
   ```
 4. `npx husky install`
-5. `npx husky add .husky/pre-commit "npm lint:fix"`
+5. `npx husky set .husky/pre-commit "npm lint:fix"`
 6. `npx husky add .husky/pre-commit "npm test"` //run tests before commit
 7. Add test script in `package.json`
   ```
