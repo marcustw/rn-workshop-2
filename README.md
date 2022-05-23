@@ -60,10 +60,6 @@
   5.1 In `src` folder, create an `index.jsx` and move the code from `App.js` here
   5.2 In `App.js` change it to
   ```
-  export { default as Main } from './src';
-  ```
-  or 
-  ```
   import Main from './src`;
   export default Main;
   ```
