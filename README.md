@@ -74,7 +74,8 @@
   ```
 7. You can run `npm run <SCRIPT_NAME>` or `npm <SCRIPT_NAME>` eg. `npm run lint:fix`.
 8. Now, check that if you do not follow the styling in `.eslintrc.js`, you have red squiggly ("error"). You can always change to "warn" in `.eslintrc.js`.
-8. At this juncture, do a simple check `npm run web` to see if there is any errors.
+9. Go to preferences > formatter > Default Formatter = Prettier
+10. At this juncture, do a simple check `npm run web` to see if there is any errors.
 
 ### Husky Integration with Prettier and ESLint
 1. `npm i -D husky lint-staged`
