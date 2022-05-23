@@ -31,16 +31,16 @@
 2. `npm i` or `yarn`
 3. `npm i -D eslint` //-D is short for --save-dev
 4. `npm init @eslint/config` //hit space to select, hit enter to finalise selection
-  4.1 Check syntax, find problems and enforce code style
-  4.2 JavaScript modules (import/export) //even if you are using typescript
-  4.3 React //even if you are using react native
-  4.4 No (unless you are using TypeScript, legend)
-  4.5 Node + Browser
-  4.6 Answer questions about your style (config=js;indentation=spaces;quotes=single;line_endings=windows/unix(or Mac);require_semicolons=Yes;)
-  4.7 [Optional] For TypeScript, run `npm i -D eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react-hooks`
-  4.8 Add Script to package.json `"lint": "eslint ."`
-  4.9 `npm i -D prettier eslint-plugin-prettier`
-  4.10 [Guide](https://dev-yakuza.posstree.com/en/react-native/eslint-prettier-husky-lint-staged/)
+  - 4.1 Check syntax, find problems and enforce code style
+  - 4.2 JavaScript modules (import/export) //even if you are using typescript
+  - 4.3 React //even if you are using react native
+  - 4.4 No (unless you are using TypeScript, legend)
+  - 4.5 Node + Browser
+  - 4.6 Answer questions about your style (config=js;indentation=spaces;quotes=single;line_endings=windows/unix(or Mac);require_semicolons=Yes;)
+  - 4.7 [Optional] For TypeScript, run `npm i -D eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react-hooks`
+  - 4.8 Add Script to package.json `"lint": "eslint ."`
+  - 4.9 `npm i -D prettier eslint-plugin-prettier`
+  - 4.10 [Guide](https://dev-yakuza.posstree.com/en/react-native/eslint-prettier-husky-lint-staged/)
 
 ### Prettier and ESLint
 1. `npm i -D eslint-config-prettier eslint-plugin-react-hooks`
@@ -59,8 +59,8 @@
   ```
 4. Follow this [gist](https://gist.github.com/MarcusTw/97a14cba79a604b2b18e58b474d31350), copy your `.eslintrc.js`.
 5. Create a folder called `src` and this is where you will write all your code.
-  5.1 In `src` folder, create an `index.jsx` and move the code from `App.js` here
-  5.2 In `App.js` change it to
+  - 5.1 In `src` folder, create an `index.jsx` and move the code from `App.js` here
+  - 5.2 In `App.js` change it to
   ```
   export { default as Main } from './src';
   ```
@@ -116,8 +116,8 @@
 ## Usage
 1. `git clone https://github.com/MarcusTw/rn-workshop-2.git <APP_NAME>`
 2. Branches:
-  2.1 For npm users, use [main branch](https://github.com/MarcusTw/rn-workshop-2/tree/main)
-  2.2 For yarn users, use [main branch](https://github.com/MarcusTw/rn-workshop-2/tree/main) and delete `package-lock.json` and run `yarn install`. Basically replace `npm i` -> `yarn add`.
+  - 2.1 For npm users, use [main branch](https://github.com/MarcusTw/rn-workshop-2/tree/main)
+  - 2.2 For yarn users, use [main branch](https://github.com/MarcusTw/rn-workshop-2/tree/main) and delete `package-lock.json` and run `yarn install`. Basically replace `npm i` -> `yarn add`.
 3. In `package.json`, change `name` to your `<APP_NAME>`
 4. Install dependencies
   ```sh
