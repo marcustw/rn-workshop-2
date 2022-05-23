@@ -1,4 +1,6 @@
 # rn-workshop-2
+Set up your react native expo project now!
+Youtube tutorial [here](https://youtu.be/-vSQCLmrQAg).
 
 ## VSCode Extensions (in order of priority)
 1. ES7+ React/Redux/React-Native snippets [dsznajder.es7-react-js-snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
